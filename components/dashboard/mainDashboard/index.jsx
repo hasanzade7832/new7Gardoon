@@ -6,6 +6,7 @@ import DashboardCtrl from "../dashboard-ctrl";
 import MiddlerBannerAll from "../forms/middleBannerForms";
 import SlidersAll from "../forms/sliderForms";
 import PostForms from "../forms/postForms";
+import CategoryForms from "../forms/categoryForms";
 
 const MainDashboard = () => {
    const [contentChanger, setcontentChanger] = useState("midBan");
@@ -17,6 +18,8 @@ const MainDashboard = () => {
          setdetails(<SlidersAll />);
       } else if (contentChanger == "posts") {
          setdetails(<PostForms />);
+      } else if (contentChanger == "categories") {
+         setdetails(<CategoryForms />);
       }
    }, [contentChanger]);
 
